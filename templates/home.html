@@ -15,14 +15,22 @@
     </style>
   </head>
   <body>
+    {% include 'nav.html'%}
+    <img id="banner" class="img-fluid mb-4" src="../static/banner.jpg">
     <div class="container">
       <h1 class="text-center my-3">Jovian Careers</h1>
-      <img id="banner" class="img-fluid" src="../static/banner.jpg">
 
       <h2 class="text-center">About Jovian</h2>
-      <p class="lead">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-      </p>
+      <div class="row mb-3">
+        <div class="col-md-8">
+          <p class="lead">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          </p>
+        </div>
+        <div class="d-none d-md-block col-md-4">
+          <img src="/static/people_working.jpg" style="height:320px">
+        </div>
+      </div>
 
       <h2 class="text-center">Job Openings</h2>
       <div>
@@ -31,9 +39,9 @@
         {% endfor %}
       </div>
       <div class="text-center">
-        <button class="btn btn-primary btn-lg mb-3">Contact Us</button>
-        <p>Copyright 2024, ElijahYe</p>
+        <a href="mailto:hello@jovian.ai?subject=Question%20about%20Job%20Openings&body=My%20name%3A%20%3Cyour%20name%20here%3E%0D%0A%0D%0AMy%20Question%3A%20%3Cyour%20question%3E"type="button" class="btn btn-primary btn-lg">Contact Us</a>
       </div>
+      {% include 'footer.html' %}
     </div>
   </body>
 </html>
